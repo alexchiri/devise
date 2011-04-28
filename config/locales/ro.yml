@@ -3,10 +3,10 @@
 ro:
   errors:
     messages:
-      expired: "a expirat, te rog să ceri una nouă"
+      expired: "a expirat, te rog să ceri unul nou"
       not_found: "nu a fost găsit"
       already_confirmed: "a fost deja confirmat, te rog încearcă să te autentifici din nou"
-      not_locked: "nu a fost blocată"
+      not_locked: "nu a fost blocat"
       not_saved:
         one: "o eroare a împiedicat %{resource} să fie salvat:"
         other: "%{count} erori au împiedicat %{resource} să fie salvat:"
