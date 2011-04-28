@@ -24,7 +24,11 @@ class Devise::RegistrationsController < ApplicationController
         respond_with resource, :location => after_inactive_sign_up_path_for(resource)
       end
     else
-      clean_up_passwords(resource)
+      if session[:omniauth] != nil
+         resource.password = Devise.friendly_token[0,20]
+      else
+        clean_up_passwords(resource)
+      end
       respond_with_navigational(resource) { render_with_scope :new }
     end
   end
